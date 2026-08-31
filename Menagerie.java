@@ -22,9 +22,11 @@ public class Menagerie {
 	
 	public Animal rechercherAnimal(String nom) {
 		for (Animal unAnimal : animaux) {
-			if (unAnimal.getNom().equalsIgnoreCase(nom)); //fail safe lors de la rentré du nom lors de recherche
+			if (unAnimal.getNom().equalsIgnoreCase(nom)) { //fail safe lors de la rentré du nom lors de recherche
 				return unAnimal; //si animal trouvé
+			}
 		}
+			
 		
 		return null; //Sinon renvoie un null (pas de string possible car doit retourner un obj de la méthode animal)
 	}

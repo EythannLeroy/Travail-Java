@@ -40,16 +40,17 @@ public class Fenetre extends JFrame {
 	public void afficherPanel(JPanel nouveauPanel) {
 		
 		if (panelPrincipal != null) {
-			getContentPane().remove(panelPrincipal);
+			remove(panelPrincipal);
 		}
 		
 		panelPrincipal = nouveauPanel;
 		
-		getContentPane().add(panelPrincipal,BorderLayout.CENTER);
+		add(panelPrincipal,BorderLayout.CENTER);
 		
 		revalidate();
 		
 		repaint();
+
 	}
 	
 	private void creerMenu() {
